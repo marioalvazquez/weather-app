@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $(".date").text(new Date().toUTCString())
+  $(".date").text(new Date().toDateString())
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(function(position){
       var crds = position.coords;
@@ -22,6 +22,13 @@ $(document).ready(function(){
         console.log(data);
         var temp = data.main.temp;
         temp = temp - 273.15;
+        var icon = `owf-${data.cod}-d`;
+        var hour = new Date();
+        if (hour.getHours() >= 19) {
+          icon = `owf-${data.cod}-n`;
+        }
+
+        $(".temp-icon i").addClass(icon);
         $(".temp").text(`${temp} °C`);
         $(".temp-text").text(data.weather[0]['description']);
         console.log(temp);
