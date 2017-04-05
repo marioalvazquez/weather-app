@@ -21,3 +21,13 @@ body {
   text-align: center; }
   .weather-first .s12 .date {
     color: #BDBDBD; }
+
+.switch label {
+  color: #FFFFFF;
+  font-size: 1.5rem; }
+
+.switch label input[type=checkbox]:checked + .lever {
+  background: #0288D1 !important; }
+
+.switch label input[type=checkbox]:checked + .lever {
+  background: #0288D1 !important; }
