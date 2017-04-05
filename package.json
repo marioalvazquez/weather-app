@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "My Weather Web Application for Free Code Camp Challenge\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C Front-End Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marioalvazquez/weather-app.git"
+  },
+  "author": "Mario Vázquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marioalvazquez/weather-app/issues"
+  },
+  "homepage": "https://github.com/marioalvazquez/weather-app#readme",
+  "devDependencies": {
+    "npm-sass": "^2.0.0"
+  }
+}

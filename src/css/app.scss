@@ -1,0 +1,33 @@
+/* Color Palette **/
+$dark-primary: #0288D1;
+$primary: #03A9F4;
+$light-primary: #B3E5FC;
+$text: #FFFFFF;
+$accent: #9E9E9E;
+$primary-text: #212121;
+$secondary-text: #757575;
+$divider: #BDBDBD;
+/* End Color Palette */
+html{
+  background: $primary;
+}
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+.h1{
+  color: $text;
+}
+.card{
+  background:$dark-primary;
+  color: $text;
+}
+.card-action{
+  background:$text !important;
+  color:$accent !important;
+}
+.weather-first{
+  text-align:center;
+  .s12 .date{
+    color: $divider;
+  }
+}

@@ -1,0 +1,23 @@
+/* Color Palette **/
+/* End Color Palette */
+html {
+  background: #03A9F4; }
+
+body {
+  font-family: 'Noto Sans', sans-serif; }
+
+.h1 {
+  color: #FFFFFF; }
+
+.card {
+  background: #0288D1;
+  color: #FFFFFF; }
+
+.card-action {
+  background: #FFFFFF !important;
+  color: #9E9E9E !important; }
+
+.weather-first {
+  text-align: center; }
+  .weather-first .s12 .date {
+    color: #BDBDBD; }
