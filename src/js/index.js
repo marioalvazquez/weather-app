@@ -22,14 +22,15 @@ $(document).ready(function(){
         console.log(data);
         var temp = data.main.temp;
         temp = temp - 273.15;
-        var icon = `owf-${data.cod}-d`;
+        let iCode = data.weather[0]['id'];
+        var icon = `owf-${iCode}-d`;
         var hour = new Date();
         if (hour.getHours() >= 19) {
-          icon = `owf-${data.cod}-n`;
+          icon = `owf-${iCode}-n`;
         }
 
         $(".temp-icon i").addClass(icon);
-        $(".temp").text(`${temp} °C`);
+        $(".temp").text(`${temp}`);
         $(".temp-text").text(data.weather[0]['description']);
         console.log(temp);
       }).fail(function(data){
@@ -39,5 +40,27 @@ $(document).ready(function(){
   }
   else{
     alert("Enable geolocation services to continue");
+  }
+});
+
+function toFarenheit(num) {
+  return num * 9 / 5 + 32;
+}
+
+function toCelcius(num) {
+  return ((num - 32) * 5)/9;
+}
+
+$('#converter').on('click', () => {
+  var temp = parseInt($('.temp').text());
+  console.log(temp);
+  if($('#converter').is(':checked'))
+  {
+    $('.temp-scale').text("F");
+    $('.temp').text(toFarenheit(temp));
+  }
+  else{
+    $('.temp-scale').text("C");
+    $('.temp').text(toCelcius(temp));
   }
 });
